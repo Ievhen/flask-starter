@@ -8,9 +8,17 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-    <title>Document</title>
+    <title>App - {% block title %}{% endblock %}</title>
 </head>
-<body>
-    Hello world
+<body class="d-flex flex-column">
+    <header class="border-bottom">
+        {% include "base/_header.html" %}
+    </header>
+    <main class="d-flex flex-grow-1 justify-content-center align-items-center">
+        {% block body %}{% endblock %}
+    </main>
+    <footer class="d-flex flex-shrink-0 border-top">
+        {% include "base/_footer.html" %}
+    </footer>
 </body>
 </html>
