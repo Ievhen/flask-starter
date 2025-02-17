@@ -15,8 +15,18 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+Then create a `.env` file and adjust environment variables.
+```
+SECRET_KEY=mysupersecretkeyistoolongtoremember
+```
+> **Note:** This is only an example. Use a really strong key in production.
+
+Next create the tables in the development SQLite database from the models. For this, Alembic is used.
+```console
+flask db upgrade
+```
 ## Usage
-After installation, you can run the application using:
+After installation you can run the application using:
 ```console
 flask run
 ```
