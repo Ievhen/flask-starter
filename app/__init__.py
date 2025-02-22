@@ -1,11 +1,11 @@
 from flask import Flask
 
-from .config import Config
+from .config import *
 from .routes import route_blueprint
 from .extensions import db, migrate
 
 
-def create_app(config_cls=Config):
+def create_app(config_cls=DevelopmentConfig):
     app = Flask(__name__)
     app.config.from_object(config_cls)
 
