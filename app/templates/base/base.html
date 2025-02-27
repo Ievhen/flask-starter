@@ -15,6 +15,7 @@
     <header class="border-bottom">
         {% include "base/_header.html" %}
     </header>
+    <div class="container mt-1">{% include "base/_flash.html" %}</div>
     <main class="d-flex flex-grow-1 justify-content-center align-items-center">
         {% block body %}{% endblock %}
     </main>
